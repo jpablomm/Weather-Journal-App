@@ -24,8 +24,12 @@ body{
     background: rgba(59, 74, 107, .4);
 }
 
-#entryHolder{
+.feel {
+    overflow: scroll;
+}
 
+#entryHolder{
+    
 }
 
 #date{

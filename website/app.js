@@ -3,7 +3,7 @@
 /* Global Variables */
 const base_url = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 const rest_url = '&appid=';
-const api_key = '5d10671a156bc50f016005850c1b873a';
+const api_key = '5d10671a156bc50f016005850c1b873a&units=metric';
 
 
 // Create a new date instance dynamically with JS
@@ -58,9 +58,9 @@ const updateUI = async () => {
     try {
         const allData = await request.json();
         let index = allData.length - 1;
-        document.getElementById('date').innerHTML = allData[index].date;
-        document.getElementById('temp').innerHTML = allData[index].temp;
-        document.getElementById('content').innerHTML = allData[index].feelings;
+        document.getElementById('date').innerHTML = allData.date;
+        document.getElementById('temp').innerHTML = allData.temp;
+        document.getElementById('content').innerHTML = allData.feelings;
     } catch(error) {
         console.log("Error", error);
     }
