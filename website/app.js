@@ -8,7 +8,7 @@ const api_key = '5d10671a156bc50f016005850c1b873a&units=metric';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
 
 // Requesting data, posting it and updating UI
 document.getElementById('generate').addEventListener('click', performAction);
